@@ -15,6 +15,9 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    const paragElement = screen.getByText(/All fields are mandatory/i);
+    expect(paragElement).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", { name: /name/i });
     expect(nameElement).toBeInTheDocument();
 
