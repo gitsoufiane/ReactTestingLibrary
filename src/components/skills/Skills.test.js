@@ -16,4 +16,31 @@ describe("Skills", () => {
     const listItemsElements = screen.getAllByRole("listitem");
     expect(listItemsElements).toHaveLength(skills.length);
   });
+
+  test("render login button", () => {
+    render(<Skills skills={skills} />);
+
+    const loginButton = screen.getByRole("button");
+    expect(loginButton).toBeInTheDocument();
+
+    const startLearningButton = screen.queryByRole("button", {
+      name: /start learning/i,
+    });
+    expect(startLearningButton).not.toBeInTheDocument();
+  });
+
+  test("render start learning button", async () => {
+    render(<Skills skills={skills} />);
+
+    const startLearningButton = await screen.findByRole(
+      "button",
+      {
+        name: /start learning/i,
+      },
+      {
+        timeout: 2000,
+      }
+    );
+    expect(startLearningButton).toBeInTheDocument();
+  });
 });
