@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const Skills = (props) => {
-  const { skills } = props;
+  const { skills = [] } = props;
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
