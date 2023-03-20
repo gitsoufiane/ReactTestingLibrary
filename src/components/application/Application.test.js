@@ -30,6 +30,12 @@ describe("Application", () => {
     const nameElement4 = screen.getByDisplayValue(/soufiane/i);
     expect(nameElement4).toBeInTheDocument();
 
+    const imgElement = screen.getByAltText(/a person with a laptop/i);
+    expect(imgElement).toBeInTheDocument();
+
+    const divElement = screen.getByTestId(/custom-element/i);
+    expect(divElement).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", { name: /bio/i });
     expect(bioElement).toBeInTheDocument();
 
