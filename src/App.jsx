@@ -11,9 +11,9 @@ function App() {
   return (
     <AppProviders>
       <div className="App">
-        <Application />
+        {/* <Application />
         <Skills skills={["HTML", "CSS"]} />
-        <Counter />
+        <Counter /> */}
         {/* <CounterTwo count={1} /> */}
         {/* <Users /> */}
         <MuiMode />
