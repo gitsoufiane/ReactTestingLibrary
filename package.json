@@ -23,14 +23,6 @@
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,css}\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:jest-dom/recommended",
-      "eslint-config-prettier"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -56,6 +48,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jest-dom": "^4.0.3",
+    "eslint-plugin-testing-library": "^5.10.2",
     "msw": "^1.2.0",
     "prettier": "2.8.6"
   }

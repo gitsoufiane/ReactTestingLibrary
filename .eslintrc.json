@@ -1,0 +1,11 @@
+{
+  "plugin": ["testing-library", "jest-dom"],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:jest-dom/recommended",
+    "eslint-config-prettier",
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react"
+  ]
+}
