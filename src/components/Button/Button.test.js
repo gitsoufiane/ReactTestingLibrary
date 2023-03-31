@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { Button, replaceCamelWithSpace } from "./Button";
 
 describe("Button", () => {
-  test("has correct intitial color and text", () => {
+  test("has correct initial color and text", () => {
     render(<Button />);
     const button = screen.getByRole("button", {
       name: /change to Midnight Blue/i,
