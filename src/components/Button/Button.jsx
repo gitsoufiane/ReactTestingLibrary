@@ -1,8 +1,9 @@
 import React from "react";
 export const Button = () => {
-  const [color, setColor] = React.useState("red");
+  const [color, setColor] = React.useState("MediumVioletRed");
   const [check, setCheck] = React.useState(false);
-  const newColor = color === "red" ? "blue " : "red";
+  const newColor =
+    color === "MediumVioletRed" ? "MidnightBlue " : "MediumVioletRed";
 
   return (
     <div>
@@ -11,7 +12,7 @@ export const Button = () => {
         onClick={() => setColor(newColor)}
         disabled={check}
       >
-        {`change to ${newColor}`}
+        {`change to ${replaceCamelWithSpace(newColor)}`}
       </button>
       <input
         type="checkbox"
